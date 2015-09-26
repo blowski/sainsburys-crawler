@@ -17,4 +17,4 @@ This will output JSON to the command line
 Run Tests
 =========
 
-vendor/bin/phpunit tests
+vendor/bin/phpunit --bootstrap tests/bootstrap.php tests
