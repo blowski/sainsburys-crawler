@@ -1,0 +1,23 @@
+{
+  "name": "blowski/sainsburys-crawler",
+  "description": "Built for Sainsburys's by Dan Blows in September 2015",
+  "require": {
+    "symfony/css-selector": "~2.5",
+    "symfony/dom-crawler": "~2.5",
+    "kriswallsmith/buzz": "^0.15.0",
+    "symfony/console": "^2.7"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.7.*"
+  },
+  "config": {
+    "autoloader-suffix": "Blowski",
+    "vendor-dir": "vendor"
+  },
+  "autoload": {
+    "psr-0": {
+      "Blowski": "src/",
+      "Blowski\\Tests": "tests/"
+    }
+  }
+}
