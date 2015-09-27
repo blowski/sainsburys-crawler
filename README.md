@@ -12,7 +12,18 @@ Run the command
 
 Just run `app/sainsburys-crawler`
 
-This will output JSON to the command line
+You'll be asked for a URL to consume. Alternatively, you can pass it on the initial command:
+
+`app/sainsburys-crawler http://www.sainsburys.co.uk/your-url-here`
+
+It will output formatted JSON to the command line.
+
+Troubleshooting
+===============
+
+To enable debugging on HTTP requests, use the -vvv flag, i.e.
+
+`app/sainsburys-crawler -vvv`
 
 Run Tests
 =========

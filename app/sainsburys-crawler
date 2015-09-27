@@ -3,9 +3,12 @@
 
 require 'vendor/autoload.php';
 
-use Blowski\CrawlCommand;
+use Blowski\ConsoleCommands\CrawlCommand;
 use Symfony\Component\Console\Application;
 
 $application = new Application();
-$application->add(new CrawlCommand());
+
+$command = new CrawlCommand();
+$application->add($command);
+
 $application->run();
