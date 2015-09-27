@@ -2,6 +2,12 @@
 
 namespace Blowski\Entity;
 
+/**
+ * Class ProductCollection
+ * @package Blowski\Entity
+ *
+ * A databag of Product objects
+ */
 class ProductCollection
 {
 
@@ -17,6 +23,9 @@ class ProductCollection
         return $this->products;
     }
 
+    /**
+     * @return int - this will be in pence
+     */
     public function getSumOfUnitPrices()
     {
         $running_total = 0;
@@ -26,6 +35,11 @@ class ProductCollection
         return $running_total;
     }
 
+    /**
+     * Notice that unit prices will now be in GBP!
+     *
+     * @return array
+     */
     public function toArray()
     {
         $products_array = [];
@@ -38,11 +52,6 @@ class ProductCollection
             ];
         }
         return $products_array;
-    }
-
-    public function toJson()
-    {
-        return json_encode($this->toArray());
     }
 
 }

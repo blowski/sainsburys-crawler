@@ -19,7 +19,7 @@ class Product
     }
 
     /**
-     * @param mixed $title
+     * @param string $title
      * @return Product
      */
     public function setTitle($title)
@@ -30,7 +30,7 @@ class Product
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getSize()
     {
@@ -38,7 +38,7 @@ class Product
     }
 
     /**
-     * @param mixed $size
+     * @param string $size
      * @return Product
      */
     public function setSize($size)
@@ -49,7 +49,7 @@ class Product
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class Product
     }
 
     /**
-     * @param mixed $description
+     * @param string $description
      * @return Product
      */
     public function setDescription($description)
@@ -68,7 +68,7 @@ class Product
     }
 
     /**
-     * @return mixed
+     * @return integer - notice the price will be in pence
      */
     public function getUnitPrice()
     {
@@ -76,7 +76,7 @@ class Product
     }
 
     /**
-     * @param mixed $unit_price
+     * @param integer $unit_price - notice the price *MUST* be in pence
      * @return Product
      */
     public function setUnitPrice($unit_price)

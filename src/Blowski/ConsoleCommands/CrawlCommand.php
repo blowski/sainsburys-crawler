@@ -11,6 +11,20 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\Question;
 
+/**
+ * Class CrawlCommand
+ * @package Blowski
+ *
+ * Asks for a URL, which should be a category URL on the Sainsbury's site.
+ * It will then attempt to load the URL, parse the data, and return a
+ * pretty-printed JSON string with:
+ *  - title
+ *  - description
+ *  - unit price
+ *  - size of the relevant product page
+ *
+ * Run in debug mode (-vvv) to show details of HTTP requests
+ */
 class CrawlCommand extends Command
 {
 
@@ -54,9 +68,7 @@ class CrawlCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-
         $page_manager = new PageManager($this->client);
-
         $output->writeln('Getting results...');
         $transformer = new CategoryPageToJsonTransformer($page_manager);
         $output->write($transformer->transform($input->getArgument('url'), TRUE).PHP_EOL);

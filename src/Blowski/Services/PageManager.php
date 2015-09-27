@@ -4,6 +4,13 @@ namespace Blowski\Services;
 
 use GuzzleHttp\Client;
 
+/**
+ * Class PageManager
+ * @package Blowski\Services
+ *
+ * Loads pages and keeps them in a cache for this request
+ * @todo break this class up into three separate classes - a loader, a cache and size calculator
+ */
 class PageManager
 {
 

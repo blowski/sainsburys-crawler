@@ -2,6 +2,12 @@
 
 namespace Blowski\Configuration;
 
+/**
+ * Class CssPaths
+ *
+ * These are the CSS paths of where to find the relevant elements
+ * in the HTML document
+ */
 class CssPaths
 {
 
